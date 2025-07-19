@@ -1,0 +1,22 @@
+{
+  "name": "sizegenetics-website",
+  "version": "1.0.0",
+  "description": "Auto-generated content website for SizeGenetics",
+  "main": "scripts/content-generator.js",
+  "scripts": {
+    "generate": "node scripts/content-generator.js",
+    "build": "npm run generate && cp -r src/* dist/",
+    "dev": "python3 -m http.server 8000 --directory src",
+    "test": "node scripts/content-generator.js"
+  },
+  "keywords": [
+    "sizegenetics",
+    "content-generation",
+    "static-website"
+  ],
+  "author": "Auto Content Generator",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
+
