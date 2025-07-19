@@ -1,0 +1,18 @@
+name = "sizegenetics-content-generator"
+main = "cloudflare-worker.js"
+compatibility_date = "2024-01-01"
+
+# Cron trigger for automatic content generation
+# This will run daily at 9 AM UTC
+[triggers]
+crons = ["0 9 * * *"]
+
+# Environment variables (set these in Cloudflare dashboard)
+[vars]
+ENVIRONMENT = "production"
+
+# Secrets to be set via wrangler secret put command:
+# wrangler secret put OPENROUTER_API_KEY
+# wrangler secret put GITHUB_TOKEN
+# wrangler secret put GITHUB_REPO
+
